@@ -15,4 +15,4 @@ fn part2(input: &str) -> usize {
 }' >> day$1/src/main.rs
 touch day$1/src/input
 cd day$1
-zellij --layout aoc
+zellij --layout ../aoc.kdl
