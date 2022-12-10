@@ -34,14 +34,14 @@ fn part2(input: &str) -> String {
     input.lines().for_each(|line| {
         screen[line_num].push(' ');
         if scan_pos >= x.clamp(1, 555) - 1 && scan_pos <= x + 1 {
-            screen[line_num][scan_pos] = '#';
+            screen[line_num][scan_pos] = '█';
         }
         scan_pos += 1;
         if scan_pos == SCREEN_LENGHT { scan_pos = 0; line_num += 1; screen.push(vec![]) }
         if line.split(' ').next().unwrap() == "addx" {
             screen[line_num].push(' ');
             if scan_pos >= x.clamp(1, 666) - 1 && scan_pos <= x+1 {
-                screen[line_num][scan_pos] = '#';
+                screen[line_num][scan_pos] = '█';
             }
             scan_pos += 1;
             if scan_pos == SCREEN_LENGHT { scan_pos = 0; line_num += 1; screen.push(vec![]) }
